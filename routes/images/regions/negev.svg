@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#8f5a2a"/>
+    <stop offset="100%" stop-color="#e1b064"/>
+  </linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="60"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#g)"/>
+<circle cx="1280" cy="180" r="170" fill="rgba(255,255,255,0.18)" filter="url(#blur)"/>
+<circle cx="260" cy="720" r="220" fill="rgba(255,255,255,0.14)" filter="url(#blur)"/>
+<path d="M0 640 C240 560 400 720 620 650 C780 600 900 460 1100 500 C1290 540 1420 700 1600 620 L1600 900 L0 900 Z" fill="rgba(255,255,255,0.14)"/>
+<path d="M0 720 C260 640 420 790 650 735 C830 690 940 590 1130 620 C1320 650 1450 780 1600 730 L1600 900 L0 900 Z" fill="rgba(0,0,0,0.08)"/>
+<text x="90" y="670" font-family="Arial, sans-serif" font-size="120" font-weight="700" fill="white">Negev</text>
+<text x="95" y="740" font-family="Arial, sans-serif" font-size="42" font-weight="500" fill="rgba(255,255,255,0.92)">Desert • Craters • Silence</text>
+<g opacity="0.22" transform="translate(1180,530)">
+  <circle cx="0" cy="0" r="120" fill="white"/>
+  <circle cx="-90" cy="70" r="38" fill="white"/>
+  <circle cx="95" cy="-80" r="30" fill="white"/>
+</g>
+</svg>

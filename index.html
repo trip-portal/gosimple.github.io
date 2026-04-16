@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>بوابة الرحلات المدرسية</title>
+<style>
+:root{
+  --text:#182235;
+  --muted:#67768d;
+  --shadow:0 18px 46px rgba(26,40,72,.10);
+  --max:1300px
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,"Noto Sans Arabic",sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top right, rgba(33,77,143,.08), transparent 28%),
+    radial-gradient(circle at top left, rgba(47,138,127,.07), transparent 24%),
+    linear-gradient(180deg,#f5f8fc 0%, #eef4fa 100%)
+}
+
+/* 🔥 HERO احترافي مع صورة */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:60px 20px 50px;
+  color:#fff;
+
+  background-image:url("routes/images/regions/aqsa2.jpg"); 
+  background-size:cover;
+  background-position:50% 35%;
+  background-repeat:no-repeat;
+}
+
+/* overlay لتغميق الصورة */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(12,20,40,.35),
+    rgba(12,20,40,.75)
+  );
+  z-index:0;
+}
+
+/* تأثير خفيف مثل التصميم الأصلي */
+.hero::before{
+  content:"";
+  position:absolute;
+  border-radius:999px;
+  filter:blur(40px);
+  opacity:.15;
+  width:220px;
+  height:220px;
+  background:white;
+  top:-50px;
+  left:-30px;
+}
+
+/* توسيط المحتوى */
+.hero-inner{
+  position:relative;
+  z-index:1;
+  max-width:var(--max);
+  margin:auto;
+  text-align:center;
+}
+
+/* عنوان */
+.hero h1{
+  margin:0;
+  font-size:clamp(34px,4vw,52px);
+  text-shadow:0 4px 18px rgba(0,0,0,.45);
+}
+
+/* وصف */
+.hero p{
+  margin-top:10px;
+  font-size:18px;
+  opacity:.95;
+  text-shadow:0 4px 18px rgba(0,0,0,.35);
+}
+
+/* الكونتينر */
+.container{
+  max-width:var(--max);
+  margin:auto;
+  padding:24px 20px 50px
+}
+
+/* grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px
+}
+
+/* الكروت */
+.card{
+  position:relative;
+  overflow:hidden;
+  min-height:220px;
+  border-radius:26px;
+  text-decoration:none;
+  color:#fff;
+  box-shadow:var(--shadow);
+  display:block;
+  transition:transform .22s ease, box-shadow .22s ease
+}
+
+.card:hover{
+  transform:translateY(-6px) scale(1.01);
+  box-shadow:0 24px 54px rgba(26,40,72,.16)
+}
+
+.card-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.05);
+  transition:transform .35s ease
+}
+
+.card:hover .card-bg{
+  transform:scale(1.10)
+}
+
+.card-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(12,20,40,.14),
+    rgba(12,20,40,.84)
+  )
+}
+
+.card-content{
+  position:relative;
+  z-index:1;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:22px
+}
+
+.card h2{
+  margin:0 0 8px;
+  font-size:28px;
+  line-height:1.35
+}
+
+.card p{
+  margin:0;
+  font-size:15px;
+  opacity:.96;
+  line-height:1.7
+}
+
+/* الفوتر */
+.footer{
+  max-width:var(--max);
+  margin:10px auto 30px;
+  padding:0 20px;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px
+}
+
+/* 📱 موبايل */
+@media(max-width:600px){
+  .hero{
+    padding:40px 15px
+  }
+
+  .hero h1{
+    font-size:28px
+  }
+
+  .hero p{
+    font-size:15px
+  }
+}
+</style></head><body>
+<header class="hero"><div class="hero-inner"><h1>بوابة الرحلات المدرسية</h1></div></header>
+<main class="container">
+<section class="grid">
+<a class="card" href="pages/preparations.html"><div class="card-bg" style="background-image:url('routes/images/regions/default.jpg')"></div><div class="card-overlay"></div><div class="card-content"><h2>التحضيرات الأولية للرحلات</h2><p>دليل رسمي يتضمن النماذج والإجراءات المطلوبة للتحضير للرحلات المدرسية، وفق تعليمات وزارة التربية والتعليم.</p></div></a>
+<a class="card" href="pages/injuries.html"><div class="card-bg" style="background-image:url('routes/images/regions/default.jpg')"></div><div class="card-overlay"></div><div class="card-content"><h2>الإصابات في المؤسسات التعليمية</h2><p>إرشادات رسمية للتعامل مع الإصابات في المؤسسات التعليمية، تشمل التعريف، التصنيف، آليات التعامل، وإجراءات التبليغ.</p></div></a>
+<a class="card" href="pages/planning-moked.html"><div class="card-bg" style="background-image:url('routes/images/regions/default.jpg')"></div><div class="card-overlay"></div><div class="card-content"><h2>مراحل التخطيط لرحلة أو جولة من خلال موقع מוקד הטבע</h2><p>خطوات معتمدة لتخطيط الرحلات المدرسية من خلال موقع מוקד הטבע، بما يشمل إدخال البيانات، إعداد الرحلة، والحصول على الموافقات.</p></div></a>
+<a class="card" href="pages/trip-responsible.html"><div class="card-bg" style="background-image:url('routes/images/regions/default.jpg')"></div><div class="card-overlay"></div><div class="card-content"><h2>مسؤول الرحلة</h2><p>تحديد مهام وصلاحيات مسؤول الرحلة، بما يشمل الإعداد، التنفيذ، الإشراف، وإدارة المخاطر خلال الرحلة.</p></div></a>
+<a class="card" href="pages/trip-coordinator.html"><div class="card-bg" style="background-image:url('routes/images/regions/default.jpg')"></div><div class="card-overlay"></div><div class="card-content"><h2>مهمّة مركز الرّحلات</h2><p>عرض مهام مركز الرحلات في المؤسسة التعليمية، بما يشمل التخطيط، التنظيم، التنسيق، والمتابعة وفق التعليمات الرسمية.</p></div></a>
+<a class="card" href="pages/top10.html"><div class="card-bg" style="background-image:url('routes/images/regions/default.jpg')"></div><div class="card-overlay"></div><div class="card-content"><h2>أهم نقاط للرّحلة</h2><p>ملخص لأهم الإرشادات المعتمدة لتنفيذ رحلة مدرسية آمنة، يشمل الجوانب التنظيمية، التربوية، والسلامة.</p></div></a>
+<a class="card" href="routes/index.html"><div class="card-bg" style="background-image:url('routes/images/regions/default.jpg')"></div><div class="card-overlay"></div><div class="card-content"><h2>مسارات البلاد</h2><p>عرض مسارات الرحلات في البلاد وفق تقسيم المناطق، مع إمكانية البحث والتصفية حسب المعايير المختلفة.</p></div></a>
+<a class="card" href="https://apps.education.gov.il/gfi/GFI_MAP.aspx" target="_blank" rel="noopener noreferrer"><div class="card-bg" style="background-image:url('routes/images/regions/default.jpg')"></div><div class="card-overlay"></div><div class="card-content"><h2>خريطة المسارات</h2><p>خريطة رسمية للمسارات المعتمدة من وزارة التربية والتعليم، لغايات التخطيط والتوجيه الجغرافي للرحلات.</p></div></a>
+</section></main>
+<div class="footer">Powered by Munged Jamal Basit</div>
+</body></html>

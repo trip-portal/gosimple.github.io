@@ -1,0 +1,1 @@
+GoSimple Final Photo Edition\n\nRun locally:\n1) Open terminal in this folder\n2) python3 -m http.server 8000\n3) Open http://localhost:8000\n\nRegion photos are now local JPG files in images/regions/\nSimple file names:\njerusalem.jpg\nnegev.jpg\ngolan.jpg\ngalilee.jpg\ncarmel.jpg\ncoast.jpg\nmountains.jpg\ndesert.jpg\neilat.jpg\ndefault.jpg\n
